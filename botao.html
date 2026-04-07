@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0">
+  <button onclick="abrirLinks()" style="
+    padding: 12px 24px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Segoe UI, sans-serif;
+  ">
+    🔗 Abrir todos os links
+  </button>
+  <script>
+    function abrirLinks() {
+      const links = [
+        "https://sgo.edp.com.br/EventsManagement/EventsList.aspx",
+        "https://sintegre.ons.org.br/",
+        "https://outlook.office.com/"
+      ];
+      links.forEach(url => window.open(url, "_blank"));
+    }
+  </script>
+</body>
+</html>
