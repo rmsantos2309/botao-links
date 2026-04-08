@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     background: #111111;
     min-height: 100vh;
@@ -13,12 +12,7 @@
     justify-content: center;
     font-family: Segoe UI, sans-serif;
   }
-
-  .container {
-    text-align: center;
-    padding: 2rem;
-  }
-
+  .container { text-align: center; padding: 2rem; }
   h1 {
     color: #cccccc;
     font-size: 2rem;
@@ -27,14 +21,7 @@
     text-transform: uppercase;
     margin-bottom: 2.5rem;
   }
-
-  .botoes {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
+  .botoes { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
   .btn {
     border: none;
     border-radius: 50px;
@@ -47,10 +34,8 @@
     transition: opacity 0.15s, transform 0.1s;
     min-width: 160px;
   }
-
   .btn:hover { opacity: 0.85; transform: translateY(-2px); }
   .btn:active { transform: scale(0.97); }
-
   .btn-verde { background: #3B6D11; color: #C0DD97; }
   .btn-azul  { background: #0C447C; color: #B5D4F4; }
   .btn-roxo  { background: #3C3489; color: #CECBF6; }
@@ -65,9 +50,8 @@
       <button class="btn btn-roxo"  onclick="abrir('transmissao')">Transmissão</button>
     </div>
   </div>
-
   <script>
-    const sistemas = {
+    var sistemas = {
       renovaveis: [
         "https://sgo.edp.com.br/EventsManagement/EventsList.aspx",
         "https://sintegre.ons.org.br/",
@@ -84,9 +68,11 @@
         "https://outlook.office.com/"
       ]
     };
-
     function abrir(sistema) {
-      sistemas[sistema].forEach(url => window.open(url, "_blank"));
+      var links = sistemas[sistema];
+      for (var i = 0; i < links.length; i++) {
+        window.open(links[i], "_blank");
+      }
     }
   </script>
 </body>
